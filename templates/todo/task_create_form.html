@@ -3,7 +3,13 @@
 
 {% block content %}
 <div class="container mt-4">
-  <h2>Create New Task</h2>
+  <h2>
+    {% if form.instance.pk %}
+      Update Task
+    {% else %}
+      Create New Task
+    {% endif %}
+  </h2>
 
   <form method="post">
     {% csrf_token %}

@@ -2,7 +2,13 @@
 
 {% block content %}
 <div class="container mt-4">
-  <h2>Create New Tag</h2>
+  <h2>
+    {% if form.instance.pk %}
+      Update Tag
+    {% else %}
+      Create New Tag
+    {% endif %}
+  </h2>
 
   <form method="post">
     {% csrf_token %}
