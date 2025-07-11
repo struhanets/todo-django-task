@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+      {% block title %}
+        <title>TODO List</title>
+      {% endblock %}
+    </head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-2">
+        {% block sidebar %}
+	        {% include 'include/sidebar.html' %}
+	      {% endblock %}
+      </div>
+	    <div class="col-md-10">
+        <main>
+          {% block content %}
+	          <h1>TODO List</h1>
+          {% endblock %}
+        </main>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
