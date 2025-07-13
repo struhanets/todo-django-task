@@ -1,0 +1,9 @@
+<aside class="p-3 bg-light">
+
+  {% block sidebar %}
+    <div class="d-flex flex-column">
+      <a href="{% url 'todo:tasks' %}" class="btn btn-primary mb-2">Home</a>
+      <a href="{% url 'todo:tags' %}" class="btn btn-secondary">Tags</a>
+    </div>
+  {% endblock %}
+</aside>
